@@ -1,65 +1,35 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
+/* =Misc
+ * ======================================== */
+/* http://sonspring.com/journal/clearing-floats */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
-*:focus {
-  outline: 0;
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
-body {
-  line-height: 1em;
-  color: black;
-  background: #fff;
+.clearfix {
+  display: inline-block;
 }
 
-ol, ul {
-  list-style: none;
+* html .clearfix {
+  height: 1%;
 }
 
-/* tables still need 'cellspacing="0"' in the markup */
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle;
+.clearfix {
+  display: block;
 }
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: "" "";
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-}
-
-img a {
-  border: none;
-}
-
-/* The *:focus rule is reset and suppresses link outlining.
- * You _must_ remember to redefine your own outline, as it’s an important accessibility aid. E.g.
- * *:focus
- *   outline: #ccc dotted medium */

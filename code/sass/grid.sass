@@ -1,3 +1,13 @@
+/*
+  ----------------------------------------------------------------------
+  Grid based on the 960 Grid System (http://960.gs/)
+  
+  Created with the help of SASS and Compass
+  SASS: http://www.sass-lang.com
+  Compass: http://github.com/chriseppstein/compass
+  ----------------------------------------------------------------------
+*/
+
 @import _base.sass
 @import _grid.sass
 
@@ -9,55 +19,4 @@
 !nine60blue_col_space = !nine60blue_col_margin + !nine60blue_col_padding
 !nine60blue_gutter_width = 2 * !nine60blue_col_margin
 
-/*
-  =Container
-  ========================================*/
-
-.container_#{!nine60blue_cols}
-  +grid-container
-
-#{enumerate(".grid",1,!nine60blue_cols,"_")}
-  +grid-unit-base
-
-/*
-  =Grid >> Children
-  ========================================*/
-
-+grid-children
-
-/*
-  =Grid >> Columns
-  ========================================
-  n*(column width + 2*column space) - 2*column space */
-
-@for !n from 1 through !nine60blue_cols
-  .grid_#{!n}		
-    +grid-unit-width(!n)
-
-/*
-  =Prefix Extra Space
-  ---------------------------
-  n*(column width + 2*column space) + padding */
-
-+grid-prefixes
-
-/*
-  =Suffix Extra Space
-  ---------------------------
-  n*(column width + 2*column space) + padding */
-
-+grid-suffixes
-
-/*
-  =Push Space
-  ---------------------------
-  n*(column width + 2*column space) */
-
-+grid-push
-
-/*
-  Pull Space
-  ---------------------------
-  -n*(column width + 2*column space) */
-
-+grid-pull
++grid-system(!nine60blue_cols)

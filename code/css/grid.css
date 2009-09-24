@@ -1,3 +1,11 @@
+/* ----------------------------------------------------------------------
+ * Grid based on the 960 Grid System (http://960.gs/)
+ *
+ * Created with the help of SASS and Compass
+ * SASS: http://www.sass-lang.com
+ * Compass: http://github.com/chriseppstein/compass
+ * ---------------------------------------------------------------------- */
+
 /* =Container
  * ======================================== */
 .container_15 {
@@ -6,25 +14,13 @@
   width: 960px;
 }
 
-.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12, .grid_13, .grid_14, .grid_15 {
+.grid_-1, .grid_-2, .grid_-3, .grid_-4, .grid_-5, .grid_-6, .grid_-7, .grid_-8, .grid_-9, .grid_-10, .grid_-11, .grid_-12, .grid_-13, .grid_-14, .grid_-15 {
   display: inline;
   float: left;
   margin-left: 9px;
   margin-right: 9px;
   padding-left: 8px;
   padding-right: 8px;
-}
-
-/* =Grid >> Children
- * ======================================== */
-.alpha {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.omega {
-  margin-right: 0;
-  margin-right: 0;
 }
 
 /* =Grid >> Columns
@@ -88,6 +84,18 @@
 
 .grid_15 {
   width: 926px;
+}
+
+/* =Grid >> Children
+ * ======================================== */
+.alpha {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.omega {
+  margin-right: 0;
+  margin-right: 0;
 }
 
 /* =Prefix Extra Space

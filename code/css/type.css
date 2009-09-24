@@ -1,7 +1,12 @@
-/* type.css
- * Sets up typography and baseline grid. This is a slightly modified
+/* ----------------------------------------------------------------------
+ * Sets up typography and baseline grid. This is a modified
  * version of Blueprint's typography.css
- * http://code.google.com/p/blueprintcss/ */
+ * http://code.google.com/p/blueprintcss/
+ *
+ * Created with the help of SASS and Compass
+ * SASS: http://www.sass-lang.com
+ * Compass: http://github.com/chriseppstein/compass
+ * ---------------------------------------------------------------------- */
 
 body {
   font-size: 14px;
