@@ -1,158 +1,267 @@
-/*----------------------------------------------------------------------
-
-Grid based on the 960 Grid System (http://960.gs/)
-Grid System
-    Width: 960 pixels
-    Columns: 12
-    Margin: 10 pixels
-    Padding: 10 pixels
-    Column Width: 40 pixels
-    Gutter Width: 40 pixels
-
-----------------------------------------------------------------------*/
-
 /* =Container
-========================================*/
+ * ======================================== */
 .container_12 {
-	margin-left: auto;
-	margin-right: auto;
-	width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
 }
 
-/* =Grid >> Global
-========================================*/
-.grid_1,
-.grid_2,
-.grid_3,
-.grid_4,
-.grid_5,
-.grid_6,
-.grid_7,
-.grid_8,
-.grid_9,
-.grid_10,
-.grid_11,
-.grid_12 {
-    display: inline;
-	float: left;
-	margin-left: 10px;
-	margin-right: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* =Grid >> Children
-========================================*/
+ * ======================================== */
 .alpha {
-    margin-left: 0;
-	padding-left: 0;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .omega {
-    margin-right: 0;
-	padding-right: 0;
+  margin-right: 0;
+  margin-right: 0;
 }
 
 /* =Grid >> 12 Columns
-========================================*/
-/* n*column width */
-.container_12 .grid_1 { width: 40px; }
-.container_12 .grid_2 { width: 120px; }
-.container_12 .grid_3 { width: 200px; }
-.container_12 .grid_4 { width: 280px; }
-.container_12 .grid_5 { width: 360px; }
-.container_12 .grid_6 { width: 440px; }
-.container_12 .grid_7 { width: 520px; }
-.container_12 .grid_8 { width: 600px; }
-.container_12 .grid_9 { width: 680px; }
-.container_12 .grid_10 { width: 760px; }
-.container_12 .grid_11 { width: 840px; }
-.container_12 .grid_12 { width: 920px; }
+ * ========================================
+ * n*(column width + 2*column space) - 2*column space */
+.grid_1 {
+  width: 40px;
+}
+
+.grid_2 {
+  width: 120px;
+}
+
+.grid_3 {
+  width: 200px;
+}
+
+.grid_4 {
+  width: 280px;
+}
+
+.grid_5 {
+  width: 360px;
+}
+
+.grid_6 {
+  width: 440px;
+}
+
+.grid_7 {
+  width: 520px;
+}
+
+.grid_8 {
+  width: 600px;
+}
+
+.grid_9 {
+  width: 680px;
+}
+
+.grid_10 {
+  width: 760px;
+}
+
+.grid_11 {
+  width: 840px;
+}
+
+.grid_12 {
+  width: 920px;
+}
 
 /* =Prefix Extra Space
---------------------------- */
-/* n*column width + 2*margin + 3*padding */
-.container_12 .prefix_1 { padding-left: 90px; }
-.container_12 .prefix_2 { padding-left: 170px; }
-.container_12 .prefix_3 { padding-left: 250px; }
-.container_12 .prefix_4 { padding-left: 330px; }
-.container_12 .prefix_5 { padding-left: 410px; }
-.container_12 .prefix_6 { padding-left: 490px; }
-.container_12 .prefix_7 { padding-left: 570px; }
-.container_12 .prefix_8 { padding-left: 650px; }
-.container_12 .prefix_9 { padding-left: 730px; }
-.container_12 .prefix_10 { padding-left: 810px; }
-.container_12 .prefix_11 { padding-left: 890px; }
+ * ---------------------------
+ * n*(column width + 2*column space) + padding */
+.prefix_1 {
+  padding-left: 90px;
+}
+
+.prefix_2 {
+  padding-left: 170px;
+}
+
+.prefix_3 {
+  padding-left: 250px;
+}
+
+.prefix_4 {
+  padding-left: 330px;
+}
+
+.prefix_5 {
+  padding-left: 410px;
+}
+
+.prefix_6 {
+  padding-left: 490px;
+}
+
+.prefix_7 {
+  padding-left: 570px;
+}
+
+.prefix_8 {
+  padding-left: 650px;
+}
+
+.prefix_9 {
+  padding-left: 730px;
+}
+
+.prefix_10 {
+  padding-left: 810px;
+}
+
+.prefix_11 {
+  padding-left: 890px;
+}
 
 /* =Suffix Extra Space
---------------------------- */
-/* n*column width + 2*margin + 3*padding */
-.container_12 .suffix_1 { padding-right: 90px; }
-.container_12 .suffix_2 { padding-right: 170px; }
-.container_12 .suffix_3 { padding-right: 250px; }
-.container_12 .suffix_4 { padding-right: 330px; }
-.container_12 .suffix_5 { padding-right: 410px; }
-.container_12 .suffix_6 { padding-right: 490px; }
-.container_12 .suffix_7 { padding-right: 570px; }
-.container_12 .suffix_8 { padding-right: 650px; }
-.container_12 .suffix_9 { padding-right: 730px; }
-.container_12 .suffix_10 { padding-right: 810px; }
-.container_12 .suffix_11 { padding-right: 890px; }
+ * ---------------------------
+ * n*(column width + 2*column space) + padding */
+.suffix_1 {
+  padding-right: 90px;
+}
+
+.suffix_2 {
+  padding-right: 170px;
+}
+
+.suffix_3 {
+  padding-right: 250px;
+}
+
+.suffix_4 {
+  padding-right: 330px;
+}
+
+.suffix_5 {
+  padding-right: 410px;
+}
+
+.suffix_6 {
+  padding-right: 490px;
+}
+
+.suffix_7 {
+  padding-right: 570px;
+}
+
+.suffix_8 {
+  padding-right: 650px;
+}
+
+.suffix_9 {
+  padding-right: 730px;
+}
+
+.suffix_10 {
+  padding-right: 810px;
+}
+
+.suffix_11 {
+  padding-right: 890px;
+}
 
 /* =Push Space
---------------------------- */
-/* n*column + 2*margin + 2*padding */
-.container_12 .push_1 { left: 80px; }
-.container_12 .push_2 { left: 160px; }
-.container_12 .push_3 { left: 240px; }
-.container_12 .push_4 { left: 320px; }
-.container_12 .push_5 { left: 400px; }
-.container_12 .push_6 { left: 480px; }
-.container_12 .push_7 { left: 560px; }
-.container_12 .push_8 { left: 640px; }
-.container_12 .push_9 { left: 720px; }
-.container_12 .push_10 { left: 800px; }
-.container_12 .push_11 { left: 880px; }
+ * ---------------------------
+ * n*(column width + 2*column space) */
+.push_1 {
+  left: 80px;
+}
+
+.push_2 {
+  left: 160px;
+}
+
+.push_3 {
+  left: 240px;
+}
+
+.push_4 {
+  left: 320px;
+}
+
+.push_5 {
+  left: 400px;
+}
+
+.push_6 {
+  left: 480px;
+}
+
+.push_7 {
+  left: 560px;
+}
+
+.push_8 {
+  left: 640px;
+}
+
+.push_9 {
+  left: 720px;
+}
+
+.push_10 {
+  left: 800px;
+}
+
+.push_11 {
+  left: 880px;
+}
 
 /* Pull Space
---------------------------- */
-/* -n*column + 2*margin + 2*padding */
-.container_12 .pull_1 { left: -80px; }
-.container_12 .pull_2 { left: -160px; }
-.container_12 .pull_3 { left: -240px; }
-.container_12 .pull_4 { left: -320px; }
-.container_12 .pull_5 { left: -400px; }
-.container_12 .pull_6 { left: -480px; }
-.container_12 .pull_7 { left: -560px; }
-.container_12 .pull_8 { left: -640px; }
-.container_12 .pull_9 { left: -720px; }
-.container_12 .pull_10 { left: -800px; }
-.container_12 .pull_11 { left: -880px; }
-
-/* Misc
---------------------------- */
-/* http://sonspring.com/journal/clearing-floats */
-.clear { 
-    clear: both;
-	display: block;
-	overflow: hidden;
-	visibility: hidden;
-	width: 0;
-	height: 0;
+ * ---------------------------
+ * -n*(column width + 2*column space) */
+.pull_1 {
+  left: -80px;
 }
 
-/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
-.clearfix:after {
-    clear: both;
-	content: ' ';
-	display: block;
-	font-size: 0;
-	line-height: 0;
-	visibility: hidden;
-	width: 0;
-	height: 0;
+.pull_2 {
+  left: -160px;
 }
 
-.clearfix { display: inline-block; }
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
+.pull_3 {
+  left: -240px;
+}
+
+.pull_4 {
+  left: -320px;
+}
+
+.pull_5 {
+  left: -400px;
+}
+
+.pull_6 {
+  left: -480px;
+}
+
+.pull_7 {
+  left: -560px;
+}
+
+.pull_8 {
+  left: -640px;
+}
+
+.pull_9 {
+  left: -720px;
+}
+
+.pull_10 {
+  left: -800px;
+}
+
+.pull_11 {
+  left: -880px;
+}

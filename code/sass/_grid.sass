@@ -1,0 +1,81 @@
+@import _base.sass
+
+!nine60blue_grid_width = 960px
+!nine60blue_cols = 12
+!nine60blue_col_margin = 10px
+!nine60blue_col_padding = 10px
+!nine60blue_col_width = 40px
+!nine60blue_col_space = !nine60blue_col_margin + !nine60blue_col_padding
+!nine60blue_gutter_width = 2 * !nine60blue_col_margin
+
+=grid-container
+  margin-left: auto
+  margin-right: auto
+  width = !nine60blue_grid_width
+ 
+=grid-unit-base(!margin = !nine60blue_col_margin, !padding = !nine60blue_col_padding)
+  display: inline
+  float: left
+  margin:
+    left = !margin
+    right = !margin
+  padding:
+    left = !padding
+    right = !padding
+    
+=grid-unit-width(!n, !col_width = !nine60blue_col_width, !col_space = !nine60blue_col_space)
+  width = !n * (!col_width + 2 * !col_space) - (2 * !col_space)
+ 
+=alpha
+  margin-left: 0
+  padding-left: 0
+ 
+=omega
+  margin-right: 0
+  margin-right: 0
+ 
+=grids(!cols = !nine60blue_cols, !gutter_width = !ninesixty_gutter_width)
+  #{enumerate(".grid_",1,!cols)}
+    +grid-unit-base
+  @for !n from 1 through !cols
+    .grid_#{!n}
+      +grid-unit-width(!n)
+ 
+=grid-prefix(!n, !col_width = !nine60blue_col_width, !col_margin = !nine60blue_col_margin, !col_padding = !nine60blue_col_padding)
+  padding-left = !n * (!col_width + 2 * (!col_margin + !col_padding)) + !col_padding
+ 
+=grid-prefixes(!cols = !nine60blue_cols)
+  @for !n from 1 through !cols - 1
+    .prefix_#{!n}
+      +grid-prefix(!n)
+ 
+=grid-suffix(!n, !col_width = !nine60blue_col_width, !col_margin = !nine60blue_col_margin, !col_padding = !nine60blue_col_padding)
+  padding-right = !n * (!col_width + 2 * (!col_margin + !col_padding)) + !col_padding
+ 
+=grid-suffixes(!cols = !nine60blue_cols)
+  @for !n from 1 through !cols - 1
+    .suffix_#{!n}
+      +grid-suffix(!n)
+      
+=grid-push(!cols = !nine60blue_cols, !col_width = !nine60blue_col_width, !col_space = !nine60blue_col_space)
+  @for !n from 1 through (!cols - 1)
+    .push_#{!n}
+      left = !n * (!col_width + 2 * !col_space)
+      
+=grid-pull(!cols = !nine60blue_cols, !col_width = !nine60blue_col_width, !col_space = !nine60blue_col_space)
+  @for !n from 1 through (!cols - 1)
+    .pull_#{!n}
+      left = -!n * (!col_width + 2 * !col_space)
+ 
+=grid-children
+  .alpha
+    +alpha
+  .omega
+    +omega
+ 
+=grid-system(!cols = !ninesixty_columns)
+  +grid-container
+  +grids(!cols)
+  +grid-prefixes(!cols)
+  +grid-suffixes(!cols)
+  +grid-children
