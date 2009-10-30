@@ -19,7 +19,7 @@
   width: 960px;
 }
 
-.grid_-1, .grid_-2, .grid_-3, .grid_-4, .grid_-5, .grid_-6, .grid_-7, .grid_-8, .grid_-9, .grid_-10, .grid_-11, .grid_-12, .grid_-13, .grid_-14, .grid_-15, .grid_-16 {
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12, .grid_13, .grid_14, .grid_15, .grid_16 {
   display: inline;
   float: left;
   margin-left: 10px;
@@ -104,7 +104,7 @@
 
 .omega {
   margin-right: 0;
-  margin-right: 0;
+  padding-right: 0;
 }
 
 /* =Prefix Extra Space
