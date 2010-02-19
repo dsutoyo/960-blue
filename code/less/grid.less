@@ -1,0 +1,188 @@
+/* ----------------------------------------------------------------------
+  Grid based on the 960 Grid System (http://960.gs/)
+ 
+--------------------------------------------------------------------- */
+
+/* =Variables and Mixins
+======================================== */
+@site_width: 960px;
+@columns: 12;
+@column_width: @site_width/@columns;
+@column_padding: 0;
+@column_margin: 10px;
+@column_space: @column_padding + @column_margin;
+@column_content: @column_width - (@column_padding*2) - (@column_margin*2);
+
+/* =Container
+======================================== */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: @site_width;
+}
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+    display: inline;
+    float: left;
+    margin-left: @column_margin;
+    margin-right: @column_margin;
+    padding-left: @column_padding;
+    padding-right: @column_padding;
+}
+
+/* =Grid >> Children
+======================================== */
+.alpha {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.omega {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+/* =Grid >> Columns
+======================================== */
+/* n*(column content + 2*column space) - 2*column space */
+.grid (@column_n:1) {
+    width: @column_n*(@column_content + (@column_space*2)) - (@column_space*2);
+}
+
+.grid_1 { .grid(1); }
+.grid_2 { .grid(2); }
+.grid_3 { .grid(3); }
+.grid_4 { .grid(4); }
+.grid_5 { .grid(5); }
+.grid_6 { .grid(6); }
+.grid_7 { .grid(7); }
+.grid_8 { .grid(8); }
+.grid_9 { .grid(9); }
+.grid_10 { .grid(10); }
+.grid_11 { .grid(11); }
+.grid_12 { .grid(12); }
+
+
+/* =Prefix Extra Space
+--------------------------- */
+/* n*(column content + 2*column space) + padding */
+.prefix (@column_n:1) {
+    width: @column_n*(@column_content + (@column_space*2)) + (@column_padding);
+}
+
+.prefix_1 { .prefix(1); }
+.prefix_2 { .prefix(2); }
+.prefix_3 { .prefix(3); }
+.prefix_4 { .prefix(4); }
+.prefix_5 { .prefix(5); }
+.prefix_6 { .prefix(6); }
+.prefix_7 { .prefix(7); }
+.prefix_8 { .prefix(8); }
+.prefix_9 { .prefix(9); }
+.prefix_10 { .prefix(10); }
+.prefix_11 { .prefix(11); }
+.prefix_12 { .prefix(12); }
+ 
+/* =Suffix Extra Space
+--------------------------- */
+/* n*(column content + 2*column space) + padding */
+.suffix (@column_n:1) {
+    width: @column_n*(@column_content + (@column_space*2)) + (@column_padding);
+}
+
+.suffix_1 { .suffix(1); }
+.suffix_2 { .suffix(2); }
+.suffix_3 { .suffix(3); }
+.suffix_4 { .suffix(4); }
+.suffix_5 { .suffix(5); }
+.suffix_6 { .suffix(6); }
+.suffix_7 { .suffix(7); }
+.suffix_8 { .suffix(8); }
+.suffix_9 { .suffix(9); }
+.suffix_10 { .suffix(10); }
+.suffix_11 { .suffix(11); }
+.suffix_12 { .suffix(12); }
+
+/* =Push Space
+--------------------------- */
+/* n*(column content + 2*column space) */
+.push (@column_n:1) {
+    width: @column_n*(@column_content + (@column_space*2));
+}
+
+.push_1 { .push(1); }
+.push_2 { .push(2); }
+.push_3 { .push(3); }
+.push_4 { .push(4); }
+.push_5 { .push(5); }
+.push_6 { .push(6); }
+.push_7 { .push(7); }
+.push_8 { .push(8); }
+.push_9 { .push(9); }
+.push_10 { .push(10); }
+.push_11 { .push(11); }
+.push_12 { .push(12); }
+
+/* Pull Space
+--------------------------- */
+/* -n*(column width + 2*column space) */
+.pull (@column_n:1) {
+    width: @column_n*(@column_content + (@column_space*2))*-1;
+}
+
+.pull_1 { .pull(1); }
+.pull_2 { .pull(2); }
+.pull_3 { .pull(3); }
+.pull_4 { .pull(4); }
+.pull_5 { .pull(5); }
+.pull_6 { .pull(6); }
+.pull_7 { .pull(7); }
+.pull_8 { .pull(8); }
+.pull_9 { .pull(9); }
+.pull_10 { .pull(10); }
+.pull_11 { .pull(11); }
+.pull_12 { .pull(12); }
+
+/* `Clear Floated Elements
+--------------------------- */ 
+/* http://sonspring.com/journal/clearing-floats */
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+ 
+/* http://perishablepress.com/press/2009/12/06/new-clearfix-hack */
+.clearfix:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+ 
+/*
+The following zoom:1 rule is specifically for IE6 + IE7.
+Move to separate stylesheet if invalid CSS is a problem.
+*/
+* html .clearfix,
+*:first-child+html .clearfix {
+    zoom: 1;
+}
