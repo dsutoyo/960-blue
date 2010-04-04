@@ -1,15 +1,15 @@
 h1. 960-Blue: A 960+Blueprint mashup
 
 Version 1.2
-
 2010-04-04
 
-Created by David Sutoyo. Based on work by Nathan Smith and the Blueprint Team.
+* Created by "David Sutoyo":http://david.sutoyo.com. Based on work by "Nathan Smith":http://sonspring.com and the "Blueprint Team":http://github.com/joshuaclayton/blueprint-css/blob/master/AUTHORS.textile.
+* "960 Grid System":http://960.gs
+* "Blueprint CSS Framework":http://blueprintcss.org
 
 h2. Info
 
-Thank you for downloading 960-Blue, a mashup of the 960 Grid System and the Blueprint CSS Framework. The mashup was originally created to help with my own workflow. I loved the simplicity of 960, but wanted more padding and spacing in the grid. I also really liked how Blueprint sets up basic styles that are
-useful as a starting point. Add to that Containers, a small plugin I wrote for 960, which adds some extra classes to the system to help with nesting grid units -- specifically in instances where the developer is unable to add the "alpha" and "omega" classes. The result was a CSS framework mashup that suited my own needs.
+Thank you for downloading 960-Blue, a mashup of the 960 Grid System and the Blueprint CSS Framework. The mashup was originally created to help with my own workflow. I loved the simplicity of 960, but wanted more padding and spacing in the grid. I also really liked how Blueprint sets up basic styles that are useful as a starting point. Add to that Containers, a small plugin I wrote for 960, which adds some extra classes to the system to help with nesting grid units -- specifically in instances where the developer is unable to add the "alpha" and "omega" classes. The result was a CSS framework mashup that suited my own needs.
 
 h2. Customizable
 
