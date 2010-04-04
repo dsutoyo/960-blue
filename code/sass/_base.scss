@@ -1,0 +1,26 @@
+/* =Grid Settings
+======================================== */
+$site_width: 960px;
+$columns: 24;
+$column: $site_width/$columns;
+$column_padding: 10px;
+$column_margin: 5px;
+$column_space: $column_padding + $column_margin;
+$column_width: $column - ($column_padding*2) - ($column_margin*2);
+
+
+/* =Type Settings
+======================================== */
+$default_line_height: 1.5em;
+$serifs: Georgia, "Times New Roman", serif;
+$sans_serifs: Helvetica, Arial, sans-serif;
+
+@mixin uppercased {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@mixin replaced {
+  display: block;
+  text-indent: -1000em;
+}
