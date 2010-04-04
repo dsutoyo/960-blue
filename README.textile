@@ -1,0 +1,27 @@
+h1. 960-Blue: A 960+Blueprint mashup
+
+Version 1.2
+
+2010-04-04
+
+Created by David Sutoyo. Based on work by Nathan Smith and the Blueprint Team.
+
+h2. Info
+
+Thank you for downloading 960-Blue, a mashup of the 960 Grid System and the Blueprint CSS Framework. The mashup was originally created to help with my own workflow. I loved the simplicity of 960, but wanted more padding and spacing in the grid. I also really liked how Blueprint sets up basic styles that are
+useful as a starting point. Add to that Containers, a small plugin I wrote for 960, which adds some extra classes to the system to help with nesting grid units -- specifically in instances where the developer is unable to add the "alpha" and "omega" classes. The result was a CSS framework mashup that suited my own needs.
+
+h2. Customizable
+
+Included with 960-Blue are SASS files for use with SASS and Compass to generate custom grid frameworks for needs specific to a project. The syntax is based on SASS 3 and is not compatible with previous versions of SASS. For more info, please see:
+
+* "SASS 3 Announcment":http://nex-3.com/posts/94-haml-sass-3-beta-released
+* "SASS Website":http://www.sass-lang.com
+
+For installing and using Compass, please see:
+
+* "Compass Website":http://compass-style.org/
+
+h2. License
+
+960-Blue is released under the GPL/MIT Licenses
