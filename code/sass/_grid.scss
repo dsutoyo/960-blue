@@ -6,10 +6,20 @@
    SASS: http://www.sass-lang.com
    Compass: http://github.com/chriseppstein/compass
    ---------------------------------------------------------------------- */
+   
+@import "_base.scss";
+
+#{$comment_start}
+   Site Width          #{$site_width}
+   Number of Columns   #{$columns}
+   Column Padding      #{$column_padding}
+   Column Margin       #{$column_margin}
+   Column Width        #{$column_width}
+#{$comment_end}
 
 /* =Container
 ======================================== */
-.container {
+.container_#{$columns} {
   margin-left: auto;
   margin-right: auto;
   width: $site_width;

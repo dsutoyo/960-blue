@@ -1,16 +1,17 @@
-/* =Grid Settings
-======================================== */
+$comment_start: "/* ----------------------------------------------------------------------";
+$comment_end: "---------------------------------------------------------------------- */";
+
+// Grid Settings
 $site_width: 960px;
-$columns: 24;
+$columns: 10;
 $column: $site_width/$columns;
 $column_padding: 10px;
-$column_margin: 5px;
+$column_margin: 10px;
 $column_space: $column_padding + $column_margin;
 $column_width: $column - ($column_padding*2) - ($column_margin*2);
 
 
-/* =Type Settings
-======================================== */
+// Type Settings
 $default_line_height: 1.5em;
 $serifs: Georgia, "Times New Roman", serif;
 $sans_serifs: Helvetica, Arial, sans-serif;
