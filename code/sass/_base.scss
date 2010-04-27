@@ -3,10 +3,10 @@ $comment_end: "-----------------------------------------------------------------
 
 // Grid Settings
 $site_width: 960px;
-$columns: 10;
+$columns: 24;
 $column: $site_width/$columns;
 $column_padding: 10px;
-$column_margin: 10px;
+$column_margin: 5px;
 $column_space: $column_padding + $column_margin;
 $column_width: $column - ($column_padding*2) - ($column_margin*2);
 
