@@ -1,27 +1,54 @@
-$comment_start: "/* ----------------------------------------------------------------------";
-$comment_end: "---------------------------------------------------------------------- */";
+// Font Sizes: for use with YUI fonts
+// http://developer.yahoo.com/yui/3/examples/cssfonts/cssfonts-size.html
+$font10px: 77%;
+$font11px: 85%;
+$font12px: 93%;
+$font13px: 100%;
+$font14px: 108%;
+$font15px: 116%;
+$font16px: 123.1%;
+$font17px: 131%;
+$font18px: 138.5%;
+$font19px: 146.5%;
+$font20px: 153.9%;
+$font21px: 161.6%;
+$font22px: 167%;
+$font23px: 174%;
+$font24px: 182%;
+$font25px: 189%;
+$font26px: 197%;
 
 // Grid Settings
 $site_width: 960px;
-$columns: 24;
+$columns: 16;
 $column: $site_width/$columns;
 $column_padding: 10px;
-$column_margin: 5px;
+$column_margin: 10px;
 $column_space: $column_padding + $column_margin;
-$column_width: $column - ($column_padding*2) - ($column_margin*2);
+$column_width: $column - ($column_space*2);
 
 
 // Type Settings
-$default_line_height: 1.5em;
+$base_font_size: $font13px;
+$default_line_height: 22px;
 $serifs: Georgia, "Times New Roman", serif;
 $sans_serifs: Helvetica, Arial, sans-serif;
 
+@mixin grid_base {
+    display: inline;
+    float: left;
+    margin-left: $column_margin;
+    margin-right: $column_margin;
+    padding-left: $column_padding;
+    padding-right: $column_padding;
+}
+
 @mixin uppercased {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 @mixin replaced {
-  display: block;
-  text-indent: -1000em;
+    display: block;
+    text-indent: -1000em;
 }

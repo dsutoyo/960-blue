@@ -8,8 +8,8 @@
    Compass: http://github.com/chriseppstein/compass
    ---------------------------------------------------------------------- */
 body {
-  font-size: 14px;
-  line-height: 1.5em;
+  font-size: 100%;
+  line-height: 22px;
   color: #333333;
   font-family: Georgia, "Times New Roman", serif;
 }
@@ -22,35 +22,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 182%;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 21px;
+  font-size: 161.6%;
   font-weight: bold;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 138.5%;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 123.1%;
 }
 
 h5 {
-  font-size: 14px;
+  font-size: 108%;
 }
 
 h6 {
-  font-size: 12px;
+  font-size: 100%;
 }
 
 .replaced {
   display: block;
   text-indent: -1000em;
-  background-repeat: no-repeat;
 }
 
 /* =Text Elements
@@ -60,21 +59,23 @@ a:focus {
 }
 
 p {
-  margin: 0 0 1.5em 0;
+  margin: 0 0 22px 0;
 }
 
 ul {
   list-style-position: outside;
-  list-style-type: none;
+  list-style-type: circle;
+  margin-left: 1.5em;
 }
 
 ol {
   list-style-position: outside;
   list-style-type: decimal;
+  margin-left: 1.5em;
 }
 
 ul, ol, dl {
-  margin: 0 0 1.5em 0;
+  margin: 0 0 22px 0;
 }
 
 dl dt {
@@ -86,21 +87,20 @@ dl dd {
 }
 
 abbr, acronym {
-  border-bottom: 1px dotted #73706e;
+  border-bottom: 1px dotted #cccccc;
   cursor: help;
 }
 
 address {
-  margin-top: 1.5em;
   font-style: italic;
 }
 
 del {
-  color: black;
+  color: #000000;
 }
 
 blockquote {
-  padding: 0 25px;
+  padding: 0 1em;
 }
 
 strong {
@@ -116,24 +116,32 @@ dfn {
 }
 
 pre, code {
-  margin: 1.5em 0;
+  margin: 22px 0;
   white-space: pre;
 }
 
 pre, code, tt {
-  font: 1em "Courier New", "Lucida Console", monospace;
-  line-height: 1.5em;
+  font-family: "Courier New", "Lucida Console", monospace;
+  line-height: 22px;
 }
 
 tt {
   display: block;
-  margin: 1.5em 0;
-  line-height: 1.5em;
+  margin: 22px 0;
+  line-height: 22px;
 }
 
 pre code {
   overflow: auto;
   display: block;
+}
+
+sup {
+  vertical-align: 50%;
+}
+
+sub {
+  vertical-align: -50%;
 }
 
 /* =Content
@@ -156,7 +164,20 @@ pre code {
 ======================================== */
 table {
   text-align: left;
-  line-height: 1.5em;
+  line-height: 22px;
+}
+
+thead tr {
+  border-bottom: 1px solid #d7d7d7;
+}
+
+tbody tr {
+  border-top: 1px solid #eeeeee;
+}
+
+th {
+  color: #555555;
+  background: #eeeeee;
 }
 
 th, td {

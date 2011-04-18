@@ -1,0 +1,187 @@
+/* ----------------------------------------------------------------------
+   Sets up typography and baseline grid. This is a modified
+   version of Blueprint's typography.css
+   http://code.google.com/p/blueprintcss/
+ 
+   Created with the help of SASS and Compass
+   SASS: http://www.sass-lang.com
+   Compass: http://github.com/chriseppstein/compass
+   ---------------------------------------------------------------------- */
+
+@import "_base.scss";
+
+body {
+    font-size: $base_font_size;
+    line-height: $default_line_height;
+    color: #333333;
+    font-family: $serifs;
+}
+
+/* =Headings
+======================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-family: $serifs;
+}
+
+h1 {
+    font-size: $font24px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: $font21px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: $font18px;
+}
+
+h4 {
+    font-size: $font16px;
+}
+
+h5 {
+    font-size: $font14px;
+}
+
+h6 {
+    font-size: $font13px;
+}
+
+.replaced {
+    @include replaced;
+}
+
+/* =Text Elements
+======================================== */
+a:focus {
+    outline: 1px dotted;
+}
+
+p {
+    margin: 0 0 $default_line_height 0;
+}
+
+ul {
+    list-style-position: outside;
+    list-style-type: circle;
+  	margin-left: 1.5em;
+}
+
+ol {
+    list-style-position: outside;
+    list-style-type: decimal;
+  	margin-left: 1.5em;
+}
+
+ul, ol, dl {
+    margin: 0 0 $default_line_height 0;
+}
+
+dl dt {
+    font-weight: normal;
+}
+
+dl dd {
+    margin: 0;
+}
+
+abbr, acronym {
+    border-bottom: 1px dotted #cccccc;
+    cursor: help;
+}
+
+address {
+    font-style: italic;
+}
+
+del {
+    color: #000000;
+}
+
+blockquote {
+    padding: 0 1em;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em, dfn {
+    font-style: italic;
+}
+
+dfn {
+    font-weight: bold;
+}
+
+pre, code {
+    margin: $default_line_height 0;
+    white-space: pre;
+}
+
+pre, code, tt {
+    font-family: "Courier New", "Lucida Console", monospace;
+    line-height: $default_line_height;
+}
+
+tt {
+    display: block;
+    margin: $default_line_height 0;
+    line-height: $default_line_height;
+}
+
+pre code {
+    overflow: auto;
+    display: block;
+}
+
+sup {
+	  vertical-align: 50%;
+}
+
+sub {
+	  vertical-align: -50%;
+}
+
+/* =Content
+--------------------------- */
+.amp {
+    font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 0;
+    position: relative;
+}
+
+.caps {
+    font-size: 10px;
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+
+/* =Table
+======================================== */
+table {
+    text-align: left;
+    line-height: $default_line_height;
+}
+
+thead tr {
+	  border-bottom: 1px solid #d7d7d7;
+}
+
+tbody tr {
+	  border-top: 1px solid #eeeeee;
+}
+
+th {
+	  color: #555555;
+	  background: #eeeeee;
+}
+
+th, td {
+    vertical-align: middle;
+}

@@ -9,31 +9,23 @@
    
 @import "_base.scss";
 
-#{$comment_start}
-   Site Width          #{$site_width}
-   Number of Columns   #{$columns}
-   Column Padding      #{$column_padding}
-   Column Margin       #{$column_margin}
-   Column Width        #{$column_width}
-#{$comment_end}
-
 /* =Container
 ======================================== */
-.container_#{$columns} {
+.container {
   margin-left: auto;
   margin-right: auto;
   width: $site_width;
 }
 
 #{enumerate(".grid",1,$columns,#{"_"})}
-  {
+{
     display: inline;
     float: left;
     margin-left: $column_margin;
     margin-right: $column_margin;
     padding-left: $column_padding;
     padding-right: $column_padding;
-  }
+}
 
 /* =Grid >> Children
 ======================================== */
@@ -60,7 +52,8 @@
 ======================================== */
 /* n*(column content + 2*column space) - 2*column space */
 @for $i from 1 through $columns {
-  .grid_container_#{$i} {
+  .grid_#{$i}_container {
+		float: left;
     width: $i*$column;
   }
 }
@@ -101,35 +94,37 @@
   }
 }
 
-/* Clear Floated Elements
---------------------------- */ 
+/* =Misc
+======================================== */
 /* http://sonspring.com/journal/clearing-floats */
 .clear {
-  clear: both;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
 }
- 
-/* http://perishablepress.com/press/2009/12/06/new-clearfix-hack */
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+.clearfix:before,
 .clearfix:after {
-  clear: both;
-  content: ' ';
-  display: block;
-  font-size: 0;
-  line-height: 0;
-  visibility: hidden;
-  width: 0;
-  height: 0;
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
 }
- 
+
+.clearfix:after {
+    clear: both;
+}
+
 /*
 The following zoom:1 rule is specifically for IE6 + IE7.
 Move to separate stylesheet if invalid CSS is a problem.
 */
-* html .clearfix,
-*:first-child+html .clearfix {
-  zoom: 1;
+.clearfix {
+    zoom: 1;
 }
