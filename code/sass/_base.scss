@@ -43,6 +43,70 @@ $sans_serifs: Helvetica, Arial, sans-serif;
     padding-right: $column_padding;
 }
 
+@mixin grid_1 {
+    width: ($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_2 {
+    width: 2*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_3 {
+    width: 3*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_4 {
+    width: 4*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_5 {
+    width: 5*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_6 {
+    width: 6*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_7 {
+    width: 7*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_8 {
+    width: 8*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_9 {
+    width: 9*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_10 {
+    width: 10*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_11 {
+    width: 11*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_12 {
+    width: 12*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_13 {
+    width: 13*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_14 {
+    width: 14*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_15 {
+    width: 15*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin grid_16 {
+    width: 16*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
 @mixin uppercased {
     text-transform: uppercase;
     letter-spacing: 0.05em;
