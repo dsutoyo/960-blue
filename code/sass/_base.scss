@@ -116,3 +116,9 @@ $sans_serifs: Helvetica, Arial, sans-serif;
     display: block;
     text-indent: -1000em;
 }
+
+@mixin round-corners($radius: 3px) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
