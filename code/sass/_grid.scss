@@ -1,0 +1,126 @@
+// DEFAULT VARIABLES
+$site_width: 960px !default;
+$columns: 16 !default;
+$column: 60px !default;
+$column_padding: 0 !default;
+$column_margin: 10px !default;
+$column_space: 10px !default; // = $column_padding + $column_margin
+$column_width: 40px !default; // = $column - ($column_space*2);
+
+// CONTAINER MIXINS
+
+// Columns
+// n*(column content + 2*column space) - 2*column space
+// TODO: added RWD and fluid support
+@mixin column($i) {
+  width: $i*($column_width + ($column_space*2)) - ($column_space*2);
+}
+
+@mixin gutter {
+  display: inline;
+  float: left;
+  margin-left: $column_margin;
+  margin-right: $column_margin;
+  padding-left: $column_padding;
+  padding-right: $column_padding;
+}
+
+// Prefix and Suffix
+// n*(column content + 2*column space) + padding
+@mixin affix($i) {
+  width: $i*($column_width + ($column_space*2)) + ($column_padding);
+}
+
+// Push
+// n*(column content + 2*column space)
+@mixin push($i) {
+  width: $i*($column_width + ($column_space*2));
+}
+
+// Pull
+// -n*(column width + 2*column space)
+@mixin pull($i) {
+  width: $i*($column_width + ($column_space*2))*-1;
+}
+
+/* = The Grid
+----------------------------------------------------------------------
+Based on the 960 Grid System (http://960.gs/)
+---------------------------------------------------------------------- */
+
+/* =Container
+======================================== */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: $site_width;
+}
+
+#{enumerate(".grid",1,$columns,#{"_"})}
+{
+  @include gutter;
+}
+
+/* =Grid >> Children
+======================================== */
+.alpha {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.omega {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+/* =Grid >> Columns
+======================================== */
+@for $i from 1 through $columns {
+  .grid_#{$i} {
+    @include column($i);
+  }
+}
+
+/* =Grid Container >> Columns
+======================================== */
+/* n*(column content + 2*column space) - 2*column space */
+@for $i from 1 through $columns {
+  .grid_#{$i}_container {
+		float: left;
+    width: $i*$column;
+  }
+}
+
+/* =Prefix Extra Space
+--------------------------- */
+@for $i from 1 through $columns - 1 {
+  .prefix_#{$i} {
+    @include affix($i);
+  }
+}
+ 
+/* =Suffix Extra Space
+--------------------------- */
+@for $i from 1 through $columns - 1 {
+  .suffix_#{$i} {
+    @include affix($i);
+  }
+}
+
+/* =Push Space
+--------------------------- */
+/* n*(column content + 2*column space) */
+@for $i from 1 through $columns {
+  .push_#{$i} {
+    @include push($i);
+  }
+}
+
+/* Pull Space
+--------------------------- */
+/* -n*(column width + 2*column space) */
+@for $i from 1 through $columns {
+  .pull_#{$i} {
+    @include pull($i);
+  }
+}

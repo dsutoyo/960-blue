@@ -1,57 +1,45 @@
-/* ----------------------------------------------------------------------
-   Sets up typography and baseline grid. This is a modified
-   version of Blueprint's typography.css
-   http://code.google.com/p/blueprintcss/
- 
-   Created with the help of SASS and Compass
-   SASS: http://www.sass-lang.com
-   Compass: http://github.com/chriseppstein/compass
+/*----------------------------------------------------------------------
+   Set up typography and baseline grid.
    ---------------------------------------------------------------------- */
-
-@import "_base.scss";
 
 body {
     font-size: $base_font_size;
-    line-height: $default_line_height;
+    line-height: $base_line_height;
     color: #333333;
-    font-family: $serifs;
+    font-family: $font_serif;
 }
 
 /* =Headings
 ======================================== */
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
-    font-family: $serifs;
+    font-family: $font_serif;
 }
 
 h1 {
-    font-size: $font24px;
+    font-size: $yui24px;
     font-weight: bold;
 }
 
 h2 {
-    font-size: $font21px;
+    font-size: $yui21px;
     font-weight: bold;
 }
 
 h3 {
-    font-size: $font18px;
+    font-size: $yui18px;
 }
 
 h4 {
-    font-size: $font16px;
+    font-size: $yui16px;
 }
 
 h5 {
-    font-size: $font14px;
+    font-size: $yui14px;
 }
 
 h6 {
-    font-size: $font13px;
-}
-
-.replaced {
-    @include replaced;
+    font-size: $yui13px;
 }
 
 /* =Text Elements
@@ -61,7 +49,7 @@ a:focus {
 }
 
 p {
-    margin: 0 0 $default_line_height 0;
+    margin: 0 0 $base_line_height 0;
 }
 
 ul {
@@ -77,7 +65,7 @@ ol {
 }
 
 ul, ol, dl {
-    margin: 0 0 $default_line_height 0;
+    margin: 0 0 $base_line_height 0;
 }
 
 dl dt {
@@ -118,19 +106,19 @@ dfn {
 }
 
 pre, code {
-    margin: $default_line_height 0;
+    margin: $base_line_height 0;
     white-space: pre;
 }
 
 pre, code, tt {
-    font-family: "Courier New", "Lucida Console", monospace;
-    line-height: $default_line_height;
+    font-family: $font_monospace;
+    line-height: $base_line_height;
 }
 
 tt {
     display: block;
-    margin: $default_line_height 0;
-    line-height: $default_line_height;
+    margin: $base_line_height 0;
+    line-height: $base_line_height;
 }
 
 pre code {
@@ -166,7 +154,7 @@ sub {
 ======================================== */
 table {
     text-align: left;
-    line-height: $default_line_height;
+    line-height: $base_line_height;
 }
 
 thead tr {

@@ -1,0 +1,901 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* =Misc
+======================================== */
+/* http://sonspring.com/journal/clearing-floats */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+.clearfix:before, .clearfix:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/*
+The following zoom:1 rule is specifically for IE6 + IE7.
+Move to separate stylesheet if invalid CSS is a problem.
+*/
+.clearfix {
+  zoom: 1;
+}
+
+/* = The Grid
+----------------------------------------------------------------------
+Based on the 960 Grid System (http://960.gs/)
+---------------------------------------------------------------------- */
+/* =Container
+======================================== */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12, .grid_13, .grid_14, .grid_15, .grid_16 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* =Grid >> Children
+======================================== */
+.alpha {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.omega {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+/* =Grid >> Columns
+======================================== */
+.grid_1 {
+  width: 40px;
+}
+
+.grid_2 {
+  width: 100px;
+}
+
+.grid_3 {
+  width: 160px;
+}
+
+.grid_4 {
+  width: 220px;
+}
+
+.grid_5 {
+  width: 280px;
+}
+
+.grid_6 {
+  width: 340px;
+}
+
+.grid_7 {
+  width: 400px;
+}
+
+.grid_8 {
+  width: 460px;
+}
+
+.grid_9 {
+  width: 520px;
+}
+
+.grid_10 {
+  width: 580px;
+}
+
+.grid_11 {
+  width: 640px;
+}
+
+.grid_12 {
+  width: 700px;
+}
+
+.grid_13 {
+  width: 760px;
+}
+
+.grid_14 {
+  width: 820px;
+}
+
+.grid_15 {
+  width: 880px;
+}
+
+.grid_16 {
+  width: 940px;
+}
+
+/* =Grid Container >> Columns
+======================================== */
+/* n*(column content + 2*column space) - 2*column space */
+.grid_1_container {
+  float: left;
+  width: 60px;
+}
+
+.grid_2_container {
+  float: left;
+  width: 120px;
+}
+
+.grid_3_container {
+  float: left;
+  width: 180px;
+}
+
+.grid_4_container {
+  float: left;
+  width: 240px;
+}
+
+.grid_5_container {
+  float: left;
+  width: 300px;
+}
+
+.grid_6_container {
+  float: left;
+  width: 360px;
+}
+
+.grid_7_container {
+  float: left;
+  width: 420px;
+}
+
+.grid_8_container {
+  float: left;
+  width: 480px;
+}
+
+.grid_9_container {
+  float: left;
+  width: 540px;
+}
+
+.grid_10_container {
+  float: left;
+  width: 600px;
+}
+
+.grid_11_container {
+  float: left;
+  width: 660px;
+}
+
+.grid_12_container {
+  float: left;
+  width: 720px;
+}
+
+.grid_13_container {
+  float: left;
+  width: 780px;
+}
+
+.grid_14_container {
+  float: left;
+  width: 840px;
+}
+
+.grid_15_container {
+  float: left;
+  width: 900px;
+}
+
+.grid_16_container {
+  float: left;
+  width: 960px;
+}
+
+/* =Prefix Extra Space
+--------------------------- */
+.prefix_1 {
+  width: 60px;
+}
+
+.prefix_2 {
+  width: 120px;
+}
+
+.prefix_3 {
+  width: 180px;
+}
+
+.prefix_4 {
+  width: 240px;
+}
+
+.prefix_5 {
+  width: 300px;
+}
+
+.prefix_6 {
+  width: 360px;
+}
+
+.prefix_7 {
+  width: 420px;
+}
+
+.prefix_8 {
+  width: 480px;
+}
+
+.prefix_9 {
+  width: 540px;
+}
+
+.prefix_10 {
+  width: 600px;
+}
+
+.prefix_11 {
+  width: 660px;
+}
+
+.prefix_12 {
+  width: 720px;
+}
+
+.prefix_13 {
+  width: 780px;
+}
+
+.prefix_14 {
+  width: 840px;
+}
+
+.prefix_15 {
+  width: 900px;
+}
+
+/* =Suffix Extra Space
+--------------------------- */
+.suffix_1 {
+  width: 60px;
+}
+
+.suffix_2 {
+  width: 120px;
+}
+
+.suffix_3 {
+  width: 180px;
+}
+
+.suffix_4 {
+  width: 240px;
+}
+
+.suffix_5 {
+  width: 300px;
+}
+
+.suffix_6 {
+  width: 360px;
+}
+
+.suffix_7 {
+  width: 420px;
+}
+
+.suffix_8 {
+  width: 480px;
+}
+
+.suffix_9 {
+  width: 540px;
+}
+
+.suffix_10 {
+  width: 600px;
+}
+
+.suffix_11 {
+  width: 660px;
+}
+
+.suffix_12 {
+  width: 720px;
+}
+
+.suffix_13 {
+  width: 780px;
+}
+
+.suffix_14 {
+  width: 840px;
+}
+
+.suffix_15 {
+  width: 900px;
+}
+
+/* =Push Space
+--------------------------- */
+/* n*(column content + 2*column space) */
+.push_1 {
+  width: 60px;
+}
+
+.push_2 {
+  width: 120px;
+}
+
+.push_3 {
+  width: 180px;
+}
+
+.push_4 {
+  width: 240px;
+}
+
+.push_5 {
+  width: 300px;
+}
+
+.push_6 {
+  width: 360px;
+}
+
+.push_7 {
+  width: 420px;
+}
+
+.push_8 {
+  width: 480px;
+}
+
+.push_9 {
+  width: 540px;
+}
+
+.push_10 {
+  width: 600px;
+}
+
+.push_11 {
+  width: 660px;
+}
+
+.push_12 {
+  width: 720px;
+}
+
+.push_13 {
+  width: 780px;
+}
+
+.push_14 {
+  width: 840px;
+}
+
+.push_15 {
+  width: 900px;
+}
+
+.push_16 {
+  width: 960px;
+}
+
+/* Pull Space
+--------------------------- */
+/* -n*(column width + 2*column space) */
+.pull_1 {
+  width: -60px;
+}
+
+.pull_2 {
+  width: -120px;
+}
+
+.pull_3 {
+  width: -180px;
+}
+
+.pull_4 {
+  width: -240px;
+}
+
+.pull_5 {
+  width: -300px;
+}
+
+.pull_6 {
+  width: -360px;
+}
+
+.pull_7 {
+  width: -420px;
+}
+
+.pull_8 {
+  width: -480px;
+}
+
+.pull_9 {
+  width: -540px;
+}
+
+.pull_10 {
+  width: -600px;
+}
+
+.pull_11 {
+  width: -660px;
+}
+
+.pull_12 {
+  width: -720px;
+}
+
+.pull_13 {
+  width: -780px;
+}
+
+.pull_14 {
+  width: -840px;
+}
+
+.pull_15 {
+  width: -900px;
+}
+
+.pull_16 {
+  width: -960px;
+}
+
+/*----------------------------------------------------------------------
+   Set up typography and baseline grid.
+   ---------------------------------------------------------------------- */
+body {
+  font-size: 13px;
+  line-height: 22px;
+  color: #333333;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* =Headings
+======================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+  font-size: 182%;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 161.6%;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 138.5%;
+}
+
+h4 {
+  font-size: 123.1%;
+}
+
+h5 {
+  font-size: 108%;
+}
+
+h6 {
+  font-size: 100%;
+}
+
+/* =Text Elements
+======================================== */
+a:focus {
+  outline: 1px dotted;
+}
+
+p {
+  margin: 0 0 22px 0;
+}
+
+ul {
+  list-style-position: outside;
+  list-style-type: circle;
+  margin-left: 1.5em;
+}
+
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+  margin-left: 1.5em;
+}
+
+ul, ol, dl {
+  margin: 0 0 22px 0;
+}
+
+dl dt {
+  font-weight: normal;
+}
+
+dl dd {
+  margin: 0;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted #cccccc;
+  cursor: help;
+}
+
+address {
+  font-style: italic;
+}
+
+del {
+  color: #000000;
+}
+
+blockquote {
+  padding: 0 1em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em, dfn {
+  font-style: italic;
+}
+
+dfn {
+  font-weight: bold;
+}
+
+pre, code {
+  margin: 22px 0;
+  white-space: pre;
+}
+
+pre, code, tt {
+  font-family: "Courier New", "Lucida Console", monospace;
+  line-height: 22px;
+}
+
+tt {
+  display: block;
+  margin: 22px 0;
+  line-height: 22px;
+}
+
+pre code {
+  overflow: auto;
+  display: block;
+}
+
+sup {
+  vertical-align: 50%;
+}
+
+sub {
+  vertical-align: -50%;
+}
+
+/* =Content
+--------------------------- */
+.amp {
+  font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 0;
+  position: relative;
+}
+
+.caps {
+  font-size: 10px;
+  font-variant: small-caps;
+  text-transform: uppercase;
+}
+
+/* =Table
+======================================== */
+table {
+  text-align: left;
+  line-height: 22px;
+}
+
+thead tr {
+  border-bottom: 1px solid #d7d7d7;
+}
+
+tbody tr {
+  border-top: 1px solid #eeeeee;
+}
+
+th {
+  color: #555555;
+  background: #eeeeee;
+}
+
+th, td {
+  vertical-align: middle;
+}
+
+/* =Widths
+======================================== */
+/*
+  Added via JS to <textarea> and class="input_full".
+  Applies only to IE7. Other browsers don't need it.
+*/
+.input_full_wrap {
+  display: block;
+  padding-right: 8px;
+}
+
+/* =UI Consistency
+======================================== */
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  vertical-align: middle;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  position: relative;
+  vertical-align: top;
+  top: 3px;
+}
+
+/* iPad */
+@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 1024px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: baseline;
+    top: 2px;
+  }
+}
+/* iPhone 3 */
+@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 480px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: baseline;
+    top: 0;
+  }
+}
+/* iPhone 4 */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 480px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: baseline;
+    top: 0;
+  }
+}
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: 0;
+  overflow: visible;
+  width: auto;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  outline: 0;
+}
+
+invalid {
+  /*
+    Suppress red glow that Firefox	
+    adds to form fields by default,	
+    even when user is still typing.	
+  */
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+select:focus,
+select:active,
+textarea:focus,
+textarea:active {
+  /* for Opera */
+  z-index: 1;
+}
+
+input[type="file"]:focus,
+input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled] {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+textarea,
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+/* Tweaks for Safari + Chrome. */
+@media (-webkit-min-device-pixel-ratio: 0) {
+  select {
+    background-image: url(../images/select_arrow.gif);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+  }
+
+  select[size],
+  select[multiple] {
+    background-image: none;
+    padding: 0;
+  }
+
+  ::-webkit-validation-bubble-message {
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
+    border: 1px solid;
+    border-color: #747474 #5e5e5e #4f4f4f;
+    color: #fff;
+    font: 11px/1 "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    padding: 15px 15px 17px;
+    text-shadow: #000 0 0 1px;
+  }
+
+  ::-webkit-validation-bubble-arrow,
+  ::-webkit-validation-bubble-top-outer-arrow,
+  ::-webkit-validation-bubble-top-inner-arrow {
+    display: none;
+  }
+}
+textarea {
+  min-height: 80px;
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+
+optgroup {
+  font-style: normal;
+  font-weight: normal;
+}

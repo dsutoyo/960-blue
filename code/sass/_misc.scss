@@ -1,0 +1,59 @@
+@mixin clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;  
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '.';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin replace-text($img_path, $img_width, $img_height, $x: 50%, $y: 50%) {
+  text-indent: -9999em;
+  height: $img_height;
+  width: $img_width;
+  overflow: hidden;
+  background: {
+    image: url('#{$img_path}');
+    position: $x $y;
+    repeat: no-repeat;
+  }
+}
+
+
+/* =Misc
+======================================== */
+/* http://sonspring.com/journal/clearing-floats */
+.clear {
+  @include clear;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+.clearfix {
+  @include clearfix;
+}
+
+/*
+The following zoom:1 rule is specifically for IE6 + IE7.
+Move to separate stylesheet if invalid CSS is a problem.
+*/
+.clearfix {
+  zoom: 1;
+}

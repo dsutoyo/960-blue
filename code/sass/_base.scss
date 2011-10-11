@@ -1,124 +1,18 @@
-// Font Sizes: for use with YUI fonts
-// http://developer.yahoo.com/yui/3/examples/cssfonts/cssfonts-size.html
-$font10px: 77%;
-$font11px: 85%;
-$font12px: 93%;
-$font13px: 100%;
-$font14px: 108%;
-$font15px: 116%;
-$font16px: 123.1%;
-$font17px: 131%;
-$font18px: 138.5%;
-$font19px: 146.5%;
-$font20px: 153.9%;
-$font21px: 161.6%;
-$font22px: 167%;
-$font23px: 174%;
-$font24px: 182%;
-$font25px: 189%;
-$font26px: 197%;
-
-// Grid Settings
+// GRID SETTINGS
+// 
 $site_width: 960px;
 $columns: 16;
 $column: $site_width/$columns;
-$column_padding: 10px;
+$column_padding: 0;
 $column_margin: 10px;
 $column_space: $column_padding + $column_margin;
 $column_width: $column - ($column_space*2);
 
 
-// Type Settings
-$base_font_size: $font13px;
-$default_line_height: 22px;
-$serifs: Georgia, "Times New Roman", serif;
-$sans_serifs: Helvetica, Arial, sans-serif;
-
-@mixin grid_base {
-    display: inline;
-    float: left;
-    margin-left: $column_margin;
-    margin-right: $column_margin;
-    padding-left: $column_padding;
-    padding-right: $column_padding;
-}
-
-@mixin grid_1 {
-    width: ($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_2 {
-    width: 2*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_3 {
-    width: 3*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_4 {
-    width: 4*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_5 {
-    width: 5*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_6 {
-    width: 6*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_7 {
-    width: 7*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_8 {
-    width: 8*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_9 {
-    width: 9*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_10 {
-    width: 10*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_11 {
-    width: 11*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_12 {
-    width: 12*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_13 {
-    width: 13*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_14 {
-    width: 14*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_15 {
-    width: 15*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin grid_16 {
-    width: 16*($column_width + ($column_space*2)) - ($column_space*2);
-}
-
-@mixin uppercased {
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-@mixin replaced {
-    display: block;
-    text-indent: -1000em;
-}
-
-@mixin round-corners($radius: 3px) {
-    -moz-border-radius: $radius;
-    -webkit-border-radius: $radius;
-    border-radius: $radius;
-}
+// TYPE SETTINGS
+$font_sizing: yui;
+$base_font_size: 13px !default;
+$base_line_height: 22px;
+$font_serif: Georgia, "Times New Roman", serif;
+$font_sans_serif: Helvetica, Arial, sans-serif;
+$font_monospace: "Courier New", "Lucida Console", monospace;
